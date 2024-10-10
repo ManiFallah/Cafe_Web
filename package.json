@@ -1,0 +1,23 @@
+{
+  "name": "item_shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bootstrap": "^5.3.3",
+    "express": "^4.21.1",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.18.1",
+    "jquery": "^3.7.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.1",
+    "nodemon": "^3.1.7"
+  }
+}
