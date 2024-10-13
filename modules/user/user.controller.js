@@ -1,9 +1,17 @@
 const userModel = require("./user.model");
 const bcrypt = require("bcrypt");
+const { validationResult } = require("express-validator");
 const { escapeSelector } = require("jquery");
 const jwt = require("jsonwebtoken");
 
 exports.register = async (req, res) => {
+  const result = validationResult(req);
+  if (!result.isEmpty()) {
+    result.errors.forEach((error) => {
+      req.flash(error.path, error.msg);
+    });
+    return res.redirect("/auth/");
+  }
   const { username, password, email } = req.body;
   const exists = await userModel.findOne({ $or: [{ username }, { email }] });
   if (exists) {

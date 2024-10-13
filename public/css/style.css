@@ -4770,4 +4770,6 @@ input:checked + .slider:before {
   margin-top: 40px;
   color: red;
   font-size: 28px;
+  color: red;
+  text-align: center;
 }

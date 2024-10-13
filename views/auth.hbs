@@ -36,7 +36,6 @@
 
     <!-- Account section Start -->
     {{#each messages.error}}
-      <h2>1</h2>
       <h2 class="error" style="color: red; text-align: center;">{{messages.error}}</h2>
     {{/each}}
     {{#if messages.passError}}
@@ -44,6 +43,15 @@
     {{/if}}
     {{#if messages.error}}
       <h2 class="error" style="color: red; text-align: center;">{{messages.error}}</h2>
+    {{/if}}
+    {{#if messages.username}}
+      <h2 class="error" style="color: red; text-align: center;">{{messages.username}}</h2>
+    {{/if}}
+    {{#if messages.email}}
+      <h2 class="error" style="color: red; text-align: center;">{{messages.email}}</h2>
+    {{/if}}
+    {{#if messages.password}}
+      <h2 class="error" style="color: red; text-align: center;">{{messages.password}}</h2>
     {{/if}}
     <div class="container style-two pt-130 pb-100">
       <div class="row align-items-start gx-xxl-45">
@@ -99,7 +107,7 @@
                 <input
                   type="name"
                   id="name"
-                  name="name"
+                  name="username"
                   class="bg-bunk h-52 w-100 border-0 text-para"
                 />
               </div>
