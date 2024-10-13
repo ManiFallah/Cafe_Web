@@ -1,0 +1,151 @@
+<html lang="zxx">
+  <!-- Mirrored from templates.hibotheme.com/etar/default/my-account.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Mar 2024 22:14:00 GMT -->
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Link of CSS files -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/swiper.bundle.min.css" />
+    <link rel="stylesheet" href="/css/scrollcue.min.css" />
+    <link rel="stylesheet" href="/css/remixicon.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <title>ایتار-قالب رستوران و کافی شاپ</title>
+    <link rel="icon" type="image/png" href="/images/favicon.webp" />
+  </head>
+  <body class="bg-bunk">
+    <!--  Preloader Start -->
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+    {{> __header}}
+
+    <!-- Breadcrumb Section End -->
+
+    <!-- Account section Start -->
+    {{#each messages.error}}
+      <h2>1</h2>
+      <h2 class="error" style="color: red; text-align: center;">{{messages.error}}</h2>
+    {{/each}}
+    {{#if messages.passError}}
+      <h2 class="error" style="color: red; text-align: center;">{{messages.passError}}</h2>
+    {{/if}}
+    {{#if messages.error}}
+      <h2 class="error" style="color: red; text-align: center;">{{messages.error}}</h2>
+    {{/if}}
+    <div class="container style-two pt-130 pb-100">
+      <div class="row align-items-start gx-xxl-45">
+        <div class="col-md-6">
+          <div class="account-box bg-mild round-10 mb-30">
+            <h4 class="fs-22 text-white f-primary mb-20">ورود</h4>
+            <form method="post" action="/auth/login">
+              <div class="form-group mb-20">
+                <label
+                  for="email"
+                  class="text-white d-block mb-10 fw-bold"
+                >ایمیل</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="bg-bunk h-52 w-100 border-0 text-para"
+                />
+              </div>
+              <div class="form-group mb-20">
+                <label for="email" class="text-white d-block mb-10 fw-bold">رمز
+                  عبور*</label>
+                <input
+                  type="password"
+                  id="pwd_1"
+                  name="password"
+                  class="bg-bunk h-52 w-100 border-0 text-para"
+                />
+              </div>
+              <div
+                class="form-group d-flex align-items-center justify-content-between mb-25"
+              >
+                <div class="checkbox">
+                  <input class="form-check-input" name="rememberMe" type="checkbox" id="test_2" />
+                  <label class="form-check-label" for="test_2">
+                    مرا به خاطر بسپار
+                  </label>
+                </div>
+                <a href="my-account.html" class="link style-three">رمز عبور خود
+                  را فراموش کردید?</a>
+              </div>
+              <button class="btn style-one">ورود</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="account-box bg-mild round-10 mb-30">
+            <h4 class="fs-22 text_optional mb-20">ثبت نام</h4>
+            <form method="post" action="/auth/register">
+              <div class="form-group mb-20">
+                <label for="name" class="text-white d-block mb-10 fw-bold">نام
+                  کاربری*</label>
+                <input
+                  type="name"
+                  id="name"
+                  name="name"
+                  class="bg-bunk h-52 w-100 border-0 text-para"
+                />
+              </div>
+              <div class="form-group mb-20">
+                <label
+                  for="email"
+                  class="text-white d-block mb-10 fw-bold"
+                >ایمیل</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="bg-bunk h-52 w-100 border-0 text-para"
+                />
+              </div>
+              <div class="form-group mb-30">
+                <label for="email" class="text-white d-block mb-10 fw-bold">رمز
+                  عبور*</label>
+                <input
+                  type="password"
+                  id="pwd_1"
+                  name="password"
+                  class="bg-bunk h-52 w-100 border-0 text-para"
+                />
+              </div>
+              <button class="btn style-one fs-18">ثبت نام</button>
+              <p class="mb-0 mt-3">
+                در حال حاضر اکانت دارم.
+                <a href="my-account.html" class="link style-two">ورود</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{>__footer}}
+    <script
+      data-cfasync="false"
+      src="/js/email-decode.min.js"
+    ></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/swiper.bundle.min.js"></script>
+    <script src="/js/fslightbox.js"></script>
+    <script src="/js/scrollcue.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+
+  <!-- Mirrored from templates.hibotheme.com/etar/default/my-account.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Mar 2024 22:14:01 GMT -->
+</html>

@@ -2,9 +2,9 @@
   "name": "item_shop",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -12,9 +12,12 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "bootstrap": "^5.3.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "express-flash": "^0.0.2",
     "express-session": "^1.18.1",
+    "hbs": "^4.2.0",
     "jquery": "^3.7.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.7.1",
