@@ -9,8 +9,8 @@ const flash = require("express-flash");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const userRouter = require("./modules/user/user.router");
+const newsLetterRouter = require("./modules/newsLetter/newsLetter.router");
 //Packages
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "hbs");
@@ -31,6 +31,7 @@ app.use(cookieParser());
 hbs.registerPartials(path.join(__dirname, "views", "partials"));
 //MiddleWares
 app.use("/auth", userRouter);
+app.use("/news", newsLetterRouter);
 //Routes
 
 app.listen(process.env.PORT, () => {

@@ -16,11 +16,22 @@
         <div class="col-xxl-5 offset-xxl-1 col-xl-6 col-lg-7 col-md-8 ps-xxl-4">
           <div class="footer-widget">
             <h2 class="text-white mb-20">اطلاع رسانی ما</h2>
-            <form action="#" class="subscribe-form position-relative">
+            {{#if messages.joinSuccess}}
+              <h4 class="text-success mb-20">{{messages.joinSuccess}}</h2>
+            {{/if}}
+            {{#if messages.joinedBefore}}
+              <h4 class="text-danger mb-20">{{messages.joinedBefore}}</h4>
+            {{/if}}
+            <form
+              action="/news/"
+              method="post"
+              class="subscribe-form position-relative"
+            >
               <input
                 type="email"
                 placeholder="ایمیل"
                 class="w-100 h-60 text-white border-0"
+                name="email"
               />
               <button
                 type="submit"
