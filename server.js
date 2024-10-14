@@ -10,6 +10,7 @@ const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const userRouter = require("./modules/user/user.router");
 const newsLetterRouter = require("./modules/newsLetter/newsLetter.router");
+const foodRouter = require("./modules/food/food.router");
 //Packages
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -32,6 +33,7 @@ hbs.registerPartials(path.join(__dirname, "views", "partials"));
 //MiddleWares
 app.use("/auth", userRouter);
 app.use("/news", newsLetterRouter);
+app.use("/foods", foodRouter);
 //Routes
 
 app.listen(process.env.PORT, () => {
