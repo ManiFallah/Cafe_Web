@@ -1,5 +1,6 @@
 const { validationResult } = require("express-validator");
 const foodModel = require("./food.model");
+const path = require("path");
 
 exports.create = async (req, res) => {
   const result = validationResult(req);
@@ -11,19 +12,23 @@ exports.create = async (req, res) => {
     return res.status(406).json({ errors });
   }
   const { name, price, cover, desc, infos, category } = req.body;
-  let newFood;
-  if (cover) {
-    newFood = await foodModel.create({
-      name,
-      price,
-      cover,
-      desc,
-      infos,
-      category,
-    });
-  } else {
-    newFood = await foodModel.create({ name, price, desc, infos, category });
-  }
+  console.log(req.files);
+  const uploadedFile = req.files.uploadFile;
+  req.files.cover.mv(
+    path.join(
+      path.dirname(path.dirname(__dirname)),
+      "public/covers",
+      req.files.cover.name
+    )
+  );
+  newFood = await foodModel.create({
+    name,
+    price,
+    cover: req.files.cover.name,
+    desc,
+    infos,
+    category,
+  });
   if (newFood) {
     return res.json({ msg: "Food Added To Menu" });
   } else {

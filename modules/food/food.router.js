@@ -1,6 +1,7 @@
 const express = require("express");
 const foodController = require("./food.controller");
 const { foodValidator } = require("./food.validator");
+const fileUpload = require("express-fileupload");
 
 const router = express.Router();
 

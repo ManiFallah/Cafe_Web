@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const schema = mongoose.Schema({
   cover: {
     type: String,
-    required: false,
+    required: true,
   },
   name: {
     type: String,
