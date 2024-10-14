@@ -10,12 +10,19 @@ exports.create = async (req, res) => {
     });
     return res.status(406).json({ errors });
   }
-  const { name, price, cover } = req.body;
+  const { name, price, cover, desc, infos, category } = req.body;
   let newFood;
   if (cover) {
-    newFood = await foodModel.create({ name, price, cover });
+    newFood = await foodModel.create({
+      name,
+      price,
+      cover,
+      desc,
+      infos,
+      category,
+    });
   } else {
-    newFood = await foodModel.create({ name, price });
+    newFood = await foodModel.create({ name, price, desc, infos, category });
   }
   if (newFood) {
     return res.json({ msg: "Food Added To Menu" });
@@ -25,7 +32,7 @@ exports.create = async (req, res) => {
 };
 
 exports.update = async (req, res) => {
-  const { name, price, cover } = req.body;
+  const { name, price, cover, desc, infos, category } = req.body;
   let mainFood;
   if (cover) {
     mainFood = await foodModel.findOneAndUpdate(
@@ -35,6 +42,9 @@ exports.update = async (req, res) => {
           name,
           price,
           cover,
+          desc,
+          infos,
+          category,
         },
       }
     );
@@ -45,6 +55,9 @@ exports.update = async (req, res) => {
         $set: {
           name,
           price,
+          desc,
+          infos,
+          category,
         },
       }
     );

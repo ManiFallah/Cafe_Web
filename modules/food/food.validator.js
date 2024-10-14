@@ -21,6 +21,18 @@ const foodValidator = () => {
       .withMessage("فیلد قیمت نمیتواند خالی باشد")
       .isInt()
       .withMessage("فیلد قیمت باید به صورت یک عدد صحیح باشد"),
+    body("desc")
+      .optional()
+      .notEmpty()
+      .withMessage("فیلد قیمت نمیتواند خالی باشد")
+      .isString()
+      .isLength({ min: 20 })
+      .withMessage("فیلد توضیحات باید حداقل 20 کاراکتر باشد"),
+    body("category")
+      .notEmpty()
+      .withMessage("فیلد قیمت نمیتواند خالی باشد")
+      .isMongoId()
+      .withMessage("این فیلد باید ID یک دسته بندی معتبر باشد"),
   ];
 };
 module.exports = { foodValidator };

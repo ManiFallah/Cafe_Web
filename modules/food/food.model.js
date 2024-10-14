@@ -1,4 +1,3 @@
-const { unique } = require("jquery");
 const mongoose = require("mongoose");
 
 const schema = mongoose.Schema({
@@ -15,6 +14,28 @@ const schema = mongoose.Schema({
     type: Number,
     required: true,
   },
+  desc: {
+    type: String,
+    required: false,
+    minLength: 20,
+  },
+  category: {
+    type: mongoose.Types.ObjectId,
+    ref: "category",
+    required: true,
+  },
+  infos: [
+    {
+      title: {
+        type: String,
+        required: true,
+      },
+      info: {
+        type: String,
+        required: true,
+      },
+    },
+  ],
 });
 
 const model = mongoose.model("food", schema);
