@@ -12,7 +12,6 @@ exports.create = async (req, res) => {
     return res.status(406).json({ errors });
   }
   const { name, price, cover, desc, infos, category } = req.body;
-  console.log(req.files);
   const uploadedFile = req.files.uploadFile;
   req.files.cover.mv(
     path.join(

@@ -13,6 +13,7 @@ const userRouter = require("./modules/user/user.router");
 const newsLetterRouter = require("./modules/newsLetter/newsLetter.router");
 const foodRouter = require("./modules/food/food.router");
 const catrgoryRouter = require("./modules/category/category.router");
+const contactRouter = require("./modules/contact/contact.router");
 //Packages
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -53,6 +54,7 @@ app.use("/auth", userRouter);
 app.use("/news", newsLetterRouter);
 app.use("/foods", foodRouter);
 app.use("/category", catrgoryRouter);
+app.use("/contact-us", contactRouter);
 //Routes
 
 app.listen(process.env.PORT, () => {

@@ -1,0 +1,231 @@
+<html lang="zxx">
+
+  <!-- Mirrored from templates.hibotheme.com/etar/default/contact-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Mar 2024 22:14:33 GMT -->
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Link of CSS files -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/swiper.bundle.min.css" />
+    <link rel="stylesheet" href="/css/scrollcue.min.css" />
+    <link rel="stylesheet" href="/css/remixicon.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <title>ایتار-قالب رستوران و کافی شاپ</title>
+    <link rel="icon" type="image/png" href="/images/favicon.webp" />
+  </head>
+  <body class="bg-bunk">
+
+    {{> __header}}
+
+    <!-- Contact Section Start -->
+    <div class="container ptb-130">
+      <div
+        class="contact-box bg-mild position-relative index-1 round-10 overflow-hidden"
+      >
+        <img
+          src="/images/about/contact-shape-1.webp"
+          alt="Image"
+          class="contact-shape-one position-absolute top-0 start-0"
+        />
+        <img
+          src="/images/about/contact-shape-2.webp"
+          alt="Image"
+          class="contact-shape-two position-absolute bottom-0 end-0"
+        />
+        {{#if messages.success}}
+            <h2 class="section-title text-success text-center mb-40">{{messages.success}}</h2>
+            {{else}}
+            <h2 class="section-title text-white text-center mb-40">برای ما پیام ارسال کنید</h2>
+        {{/if}}
+        <form action="/contact-us" method="post">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group mb-20">
+                {{#if messages.name}}
+                    <label for="name" style="color: red;">{{messages.name}}</label>
+                {{/if}}
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="نام"
+                  class="bg-bunk text-white w-100 h-70 border-0 round-10"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-20">
+                {{#if messages.email}}
+                    <label for="name" style="color: red;">{{messages.email}}</label>
+                {{/if}}
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="ایمیل"
+                  class="bg-bunk text-white w-100 h-70 border-0 round-10"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-20">
+                {{#if messages.phone}}
+                    <label for="name" style="color: red;">{{messages.phone}}</label>
+                {{/if}}
+                <input
+                  type="number"
+                  name="phone"
+                  id="phone"
+                  placeholder="تلفن همراه"
+                  class="bg-bunk text-white w-100 h-70 border-0 round-10"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-20">
+                {{#if messages.subject}}
+                    <label for="name" style="color: red;">{{messages.subject}}</label>
+                {{/if}}
+                <input
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  placeholder="موضوع"
+                  class="bg-bunk text-white w-100 h-70 border-0 round-10"
+                />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group mb-20">
+                {{#if messages.text}}
+                    <label for="feedback-msg" style="color: red;">{{messages.text}}</label>
+                {{/if}}
+                <textarea
+                  name="text"
+                  id="feedback-msg"
+                  cols="30"
+                  rows="10"
+                  placeholder="پیام"
+                  class="bg-bunk w-100 border-0 resize-0 round-10"
+                ></textarea>
+              </div>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn style-one round-5">ارسال پیام</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="comp-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8385385572983!2d144.95358331584498!3d-37.81725074201705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4dd5a05d97%3A0x3e64f855a564844d!2s121%20King%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sbd!4v1612419490850!5m2!1sen!2sbd"
+      >
+      </iframe>
+    </div>
+    <div class="contact-info-wrap position-relative index-1 pt-130 pb-100">
+      <img
+        src="/images/about/contact-shape.webp"
+        alt="Image"
+        class="contact-shape position-absolute top-0 start-0 w-100 h-100"
+      />
+      <div class="container">
+        <div class="row gx-xxl-35 justify-content-center">
+          <div class="col-xl-4 col-md-6">
+            <div
+              class="contact-card bg-mild d-flex align-items-center round-10 mb-30"
+            >
+              <div
+                class="contact-icon d-flex flex-column align-items-center justify-content-center rounded-circle"
+              >
+                <img src="/images/icons/clock-3.svg" alt="Image" />
+              </div>
+              <div class="contact-info">
+                <h4 class="fs-24 fw-semibold mb-15">ساعات کار</h4>
+                <span class="d-block fs-xxl-18">شنبه تا چهارشنبه: ۹ تا ۲۰
+                </span>
+                <span class="d-block fs-xxl-18">پنجشنبه: ۹ تا ۱۸ </span>
+                <span class="d-block fs-xxl-18">جمعه: بسته</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <div
+              class="contact-card bg-mild d-flex align-items-center round-10 mb-30"
+            >
+              <div
+                class="contact-icon d-flex flex-column align-items-center justify-content-center rounded-circle"
+              >
+                <img src="/images/icons/map-2.svg" alt="Image" />
+              </div>
+              <div class="contact-info">
+                <h4 class="fs-24 fw-semibold mb-15">آدرس</h4>
+                <span class="d-block fs-xxl-18">تهران منطقه 22 خیابان شیرازی</span>
+                <a
+                  href="/contact-us/"
+                  class="link style-three fs-xxl-18 text-decoration-underline"
+                >مکان را بررسی کنید</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-6">
+            <div
+              class="contact-card bg-mild d-flex align-items-center round-10 mb-30"
+            >
+              <div
+                class="contact-icon d-flex flex-column align-items-center justify-content-center rounded-circle"
+              >
+                <img src="/images/icons/clock-3.svg" alt="Image" />
+              </div>
+              <div class="contact-info">
+                <h4 class="fs-24 fw-semibold mb-15">در تماس باشید</h4>
+                <span class="d-block fs-xxl-18">شماره:
+                  <a
+                    href="tel:۹۶۷۵۴۸۷۶۹۱"
+                    class="link style-three text-offwhite"
+                  >۰۲۱۴۴۷۱۰۷۵۰</a></span>
+                <span class="d-block fs-xxl-18">ایمیل:
+                  <a
+                    href="https://templates.hibotheme.com/cdn-cgi/l/email-protection#345d5a525b74514055461a575b59"
+                    class="link style-three text-offwhite"
+                  ><span
+                      class="__cf_email__"
+                      data-cfemail="d6bfb8b0b996b3a2b7a4f8b5b9bb"
+                    >[dsfew@gmail.com]</span></a></span>
+                <a
+                  href="/contact-us/"
+                  class="link style-three fs-xxl-18 text-decoration-underline"
+                >ارتباط</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact Section End -->
+
+    {{> __footer}}
+
+    <!-- Link of JS files -->
+    <script data-cfasync="false" src="/js/email-decode.min.js"></script><script
+      src="/js/bootstrap.bundle.min.js"
+    ></script>
+    <script src="/js/swiper.bundle.min.js"></script>
+    <script src="/js/fslightbox.js"></script>
+    <script src="/js/scrollcue.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+
+  <!-- Mirrored from templates.hibotheme.com/etar/default/contact-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Mar 2024 22:14:34 GMT -->
+</html>

@@ -25,7 +25,6 @@ const schema = mongoose.Schema({
 //User Model Schema
 
 schema.pre("save", async function (next) {
-  console.log(this);
   this.password = await bcrypt.hash(this.password, await bcrypt.genSalt(10));
   next();
 });

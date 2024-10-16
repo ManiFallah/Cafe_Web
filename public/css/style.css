@@ -714,7 +714,7 @@ select {
 }
 
 .section-bg-shape {
-  background-image: url(../img/shape-5.webp);
+  background-image: url(/images/shape-5.webp);
   background-position: center;
   background-repeat: repeat-y;
   background-size: contain;
@@ -1305,7 +1305,7 @@ select {
   right: 50.5%;
   transform: translateX(50%);
   z-index: -1;
-  background-image: url(../img/hero/hero-img-2.webp);
+  background-image: url(/images/hero/hero-img-2.webp);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -1497,7 +1497,7 @@ select {
         About CSS
 -------------------------------*/
 .about-wrap.style-one .about-bg {
-  background-image: url(../img/about/about-img-1.webp);
+  background-image: url(/images/about/about-img-1.webp);
   height: 830px;
 }
 .about-wrap.style-one .about-shape {
@@ -1575,11 +1575,11 @@ select {
   font-family: Vazirmatn, sans-serif;
 }
 .about-wrap.style-two .about-bg {
-  background-image: url(../img/about/about-img-2.webp);
+  background-image: url(/images/about/about-img-2.webp);
   height: 920px;
 }
 .about-wrap.style-three .about-bg {
-  background-image: url(../img/about/about-img-4.webp);
+  background-image: url(/images/about/about-img-4.webp);
   width: 100%;
   height: 100%;
   border-radius: 50px;
@@ -1645,7 +1645,7 @@ select {
   width: 200px;
   height: 502px;
   top: 17px;
-  background-image: url(../img/recipes/recipe-img-2.webp);
+  background-image: url(/images/recipes/recipe-img-2.webp);
   background-position: top right;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1848,7 +1848,7 @@ select {
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url(../img/recipes/cat-shape.webp);
+  background-image: url(/images/recipes/cat-shape.webp);
   background-position: top right;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1987,10 +1987,10 @@ select {
   height: 600px;
 }
 .video-bg.video-bg-1 {
-  background-image: url(../img/video-bg.webp);
+  background-image: url(/images/video-bg.webp);
 }
 .video-bg.video-bg-2 {
-  background-image: url(../img/video-bg-2.webp);
+  background-image: url(/images/video-bg-2.webp);
 }
 .video-bg.style-one:after {
   position: absolute;
@@ -2108,7 +2108,7 @@ select {
   width: 42px;
   height: 445px;
   transform: translateY(-50%);
-  background-image: url(../img/shape-4.webp);
+  background-image: url(/images/shape-4.webp);
   background-color: var(--codColor);
   background-repeat: no-repeat;
   background-size: 42px 411px;
@@ -2136,7 +2136,7 @@ select {
   opacity: 1;
 }
 .reservation-wrap.style-one .reservation-box form select {
-  background-image: url(../img/down-arrow-2.svg);
+  background-image: url(/images/down-arrow-2.svg);
 }
 .reservation-wrap.style-one .reservation-box form .btn {
   border-radius: 5px;
@@ -2203,7 +2203,7 @@ select {
   right: 0;
 }
 .reservation-wrap.style-one.booking {
-  background-image: url(../img/about/booking-bg.webp);
+  background-image: url(/images/about/booking-bg.webp);
 }
 .reservation-wrap.style-one.booking .booking-shape {
   bottom: 150px;
@@ -2238,7 +2238,7 @@ select {
   background-color: #151b20;
 }
 .reservation-wrap.style-one.cafe {
-  background-image: url(../img/about/booking-bg-2.webp);
+  background-image: url(/images/about/booking-bg-2.webp);
 }
 .reservation-wrap.style-one.cafe:after {
   position: absolute;
@@ -2291,10 +2291,10 @@ select {
   top: 17.5px;
 }
 .reservation-wrap.style-two .reservation-box form select {
-  background-image: url(../img/down-arrow-3.svg);
+  background-image: url(/images/down-arrow-3.svg);
 }
 .reservation-wrap.style-two .reservation-bg {
-  background-image: url(../img/about/reservation-bg.webp);
+  background-image: url(/images/about/reservation-bg.webp);
   height: 604px;
   width: 100%;
   border-radius: 10px 0 0 10px;
@@ -2406,7 +2406,7 @@ select {
   z-index: -1;
 }
 .testimonial-wrap.style-two .testimonial-bg {
-  background-image: url(../img/testimonials/testimonial-bg.webp);
+  background-image: url(/images/testimonials/testimonial-bg.webp);
   height: 840px;
 }
 
@@ -2631,11 +2631,11 @@ select {
 }
 
 .portfolio-bg-one {
-  background-image: url(../img/portfolio/single-portfolio-1.webp);
+  background-image: url(/images/portfolio/single-portfolio-1.webp);
 }
 
 .portfolio-bg-two {
-  background-image: url(../img/portfolio/single-portfolio-2.webp);
+  background-image: url(/images/portfolio/single-portfolio-2.webp);
 }
 
 .portfolio-details .feature-card-wrap.style-one .feature-card::after {
@@ -2664,7 +2664,7 @@ select {
   width: 22px;
   height: 127px;
   transform: translateY(-50%);
-  background-image: url(../img/shape-16.webp);
+  background-image: url(/images/shape-16.webp);
   background-repeat: no-repeat;
   background-size: 22px 127px;
   background-position: center;
@@ -2743,31 +2743,31 @@ select {
         HiStory CSS
 -------------------------------*/
 .story-img-1 {
-  background-image: url(../img/history/history-1.webp);
+  background-image: url(/images/history/history-1.webp);
 }
 
 .story-img-2 {
-  background-image: url(../img/history/history-2.webp);
+  background-image: url(/images/history/history-2.webp);
 }
 
 .story-img-3 {
-  background-image: url(../img/history/history-3.webp);
+  background-image: url(/images/history/history-3.webp);
 }
 
 .story-img-4 {
-  background-image: url(../img/history/history-4.webp);
+  background-image: url(/images/history/history-4.webp);
 }
 
 .story-img-5 {
-  background-image: url(../img/history/history-5.webp);
+  background-image: url(/images/history/history-5.webp);
 }
 
 .story-img-6 {
-  background-image: url(../img/history/history-6.webp);
+  background-image: url(/images/history/history-6.webp);
 }
 
 .history-wrap {
-  background-image: url(../img/history-bg.webp);
+  background-image: url(/images/history-bg.webp);
   background-color: #0e1317;
 }
 
@@ -3960,7 +3960,7 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-image: url(../img/down-arrow-white.webp);
+  background-image: url(/images/down-arrow-white.webp);
   background-repeat: no-repeat;
   background-size: 15px;
   background-position: 4% 50%;
@@ -4074,7 +4074,7 @@ input[type="range"]::-webkit-slider-thumb {
   background-color: var(--optionalColor);
   max-width: 280px;
   color: var(--whiteColor);
-  background-image: url(../img/down-arrow-2.svg);
+  background-image: url(/images/down-arrow-2.svg);
   background-repeat: no-repeat;
   background-size: 14px;
 }
@@ -4422,7 +4422,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .faq-bg {
-  background-image: url(../img/about/faq-bg.webp);
+  background-image: url(/images/about/faq-bg.webp);
   height: 615px;
 }
 
@@ -4492,7 +4492,7 @@ input[type="range"]::-webkit-slider-thumb {
   margin: auto 0;
   transition: 0.4s;
   box-shadow: 0 0px 15px rgba(32, 32, 32, 0.2392156863);
-  background: white url("../img/sunny.webp");
+  background: white url("/images/sunny.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--aztechColor);
@@ -4510,7 +4510,7 @@ input:focus + .slider {
 
 input:checked + .slider:before {
   transform: translateX(0);
-  background: white url("../img/night.webp");
+  background: white url("/images/night.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 18px;
