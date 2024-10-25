@@ -14,6 +14,8 @@ const newsLetterRouter = require("./modules/newsLetter/newsLetter.router");
 const foodRouter = require("./modules/food/food.router");
 const catrgoryRouter = require("./modules/category/category.router");
 const contactRouter = require("./modules/contact/contact.router");
+const commentRouter = require("./modules/comment/comment.router");
+const whishlistRouter = require("./modules/whishlist/whishlist.router");
 //Packages
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -41,20 +43,28 @@ app.use(
     debug: false,
   })
 );
-//MiddleWares
-app.post("/", (req, res) => {
-  console.log(req.files.cover);
-  const uploadedFile = req.files.uploadFile;
-  req.files.cover.mv(
-    path.join(__dirname, "public/covers", req.files.cover.name)
-  );
-  res.json({ cover: req.files.cover.name });
+hbs.registerHelper("ifgt", function (a, b, options) {
+  if (a > b) {
+    return options.fn(this);
+  } else {
+    return options.inverse(this);
+  }
 });
+hbs.registerHelper("iflt", function (a, b, options) {
+  if (a < b) {
+    return options.fn(this);
+  } else {
+    return options.inverse(this);
+  }
+});
+//MiddleWares
 app.use("/auth", userRouter);
 app.use("/news", newsLetterRouter);
 app.use("/foods", foodRouter);
 app.use("/category", catrgoryRouter);
 app.use("/contact-us", contactRouter);
+app.use("/comment", commentRouter);
+app.use("/whishlist", whishlistRouter);
 //Routes
 
 app.listen(process.env.PORT, () => {

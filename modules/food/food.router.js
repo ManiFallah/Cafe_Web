@@ -10,4 +10,5 @@ router
   .post(foodValidator(), foodController.create)
   .get(foodController.getAll)
   .put(foodController.update);
+router.route("/details").get(foodController.getOne);
 module.exports = router;

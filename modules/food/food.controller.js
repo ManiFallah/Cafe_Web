@@ -1,6 +1,8 @@
 const { validationResult } = require("express-validator");
 const foodModel = require("./food.model");
+const categoryModel = require("../category/category.model");
 const path = require("path");
+const { isValidObjectId } = require("mongoose");
 
 exports.create = async (req, res) => {
   const result = validationResult(req);
@@ -16,7 +18,7 @@ exports.create = async (req, res) => {
   req.files.cover.mv(
     path.join(
       path.dirname(path.dirname(__dirname)),
-      "public/covers",
+      "public/images/covers/items",
       req.files.cover.name
     )
   );
@@ -76,5 +78,28 @@ exports.update = async (req, res) => {
 
 exports.getAll = async (req, res) => {
   const foods = await foodModel.find({}).lean();
-  return res.json({ foods });
+  const nums = foods.length;
+  const pageNums =
+    foods.length % 2 == 0 ? foods.length / 2 : parseInt(foods.length / 2) + 1;
+  res.render("items", {
+    foods,
+    nums,
+  });
+};
+exports.getOne = async (req, res) => {
+  const { item } = req.query;
+  if (!isValidObjectId(item)) {
+    req.flash("error", "ایتمی با این ایدی وجود ندارد");
+    return res.render("/foods/");
+  }
+  const food = await foodModel.findOne({ _id: item });
+  if (!food) {
+    req.flash("error", "ایتمی با این ایدی وجود ندارد");
+    return res.render("/foods/");
+  }
+  const category = await categoryModel.findOne({ _id: food.category });
+  res.render("item", {
+    food,
+    category,
+  });
 };
