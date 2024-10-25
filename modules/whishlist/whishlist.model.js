@@ -9,7 +9,7 @@ const schema = mongoose.Schema({
   items: [
     {
       type: mongoose.Types.ObjectId,
-      ref: "item",
+      ref: "food",
       required: true,
     },
   ],

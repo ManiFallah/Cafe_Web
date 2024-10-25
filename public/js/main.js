@@ -207,6 +207,25 @@
   scrollCue.init();
 })();
 
+const delbtns = document.querySelectorAll("#delbtn");
+delbtns.forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    const tr = btn.parentElement.parentElement;
+    const name = tr.children[1].children[0].innerHTML;
+    const req = new Request("/whishlist/del", {
+      method: "DELETE",
+      body: JSON.stringify({ title: name }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const res = await fetch(req);
+    if (await res.json()) {
+      tr.remove();
+    }
+  });
+});
+
 // Offcanvas Responsive Menu
 const list = document.querySelectorAll(".responsive-menu-list");
 function accordion(e) {

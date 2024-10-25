@@ -1,4 +1,5 @@
 const whishlistModel = require("./whishlist.model");
+const foodModel = require("../food/food.model");
 const jwt = require("jsonwebtoken");
 
 exports.addToWhishlist = async (req, res) => {
@@ -35,7 +36,29 @@ exports.getWhishlist = async (req, res) => {
     return res.redirect("/auth/");
   }
   const id = jwt.verify(req.cookies.accessToken, process.env.SECRET).id;
-  const whishlist = await whishlistModel.findOne({ user: id }).populate({items});
-  const items = whishlist.items
-  res.render();
+  const whishlist = await whishlistModel
+    .findOne({ user: id })
+    .populate({ path: "items" });
+  const items = whishlist.items;
+  res.render("whishlist", { items });
+};
+exports.delete = async (req, res) => {
+  const { title } = req.body;
+  const accessToken = req.cookies.accessToken;
+  const id = jwt.decode(accessToken, process.env.SECRET).id;
+  const main = await foodModel.findOne({ name: title });
+  const whishlist = await whishlistModel.findOneAndUpdate(
+    { user: id },
+    {
+      $pull: {
+        items: main._id,
+      },
+    }
+  );
+  // whishlist.items.filter((item) => {
+  //   item.equals(main._id);
+  //   // console.log(item);
+  // });
+  // await whishlist.save();
+  res.json(true);
 };
