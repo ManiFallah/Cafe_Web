@@ -1,6 +1,7 @@
 const { validationResult } = require("express-validator");
 const foodModel = require("./food.model");
 const categoryModel = require("../category/category.model");
+const saleModel = require("../sale/sale.model");
 const path = require("path");
 const { isValidObjectId } = require("mongoose");
 
@@ -97,7 +98,17 @@ exports.getOne = async (req, res) => {
     req.flash("error", "ایتمی با این ایدی وجود ندارد");
     return res.render("/foods/");
   }
+  const sale = await saleModel.findOne({ food: item });
+  let onSalePrice;
   const category = await categoryModel.findOne({ _id: food.category });
+  if (sale) {
+    onSalePrice = (food.price * sale.percent) / 100;
+    return res.render("item", {
+      food,
+      category,
+      onSalePrice,
+    });
+  }
   res.render("item", {
     food,
     category,

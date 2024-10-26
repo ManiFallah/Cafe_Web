@@ -631,10 +631,18 @@
                 </ul>
                 <span class="ms-2 lh-1">(65 بررسی)</span>
               </div>
-              <h4 class="price-tag fs-24 f-primary">{{food.price}}
-                تومان
-                <span class="text-offwhite fs-18 text-decoration-line-through">-
-                  ۱۹۰۰۰۰ تومان</span></h4>
+              {{#if onSalePrice}}
+                <h4 class="price-tag fs-24 f-primary">{{onSalePrice}}
+                  تومان
+                  <span
+                    class="text-offwhite fs-18 text-decoration-line-through"
+                  >-
+                    {{food.price}}
+                    تومان</span></h4>
+              {{else}}
+                <h4 class="price-tag fs-24 f-primary">{{food.price}}
+                  تومان</h4>
+              {{/if}}
               <p class="fw-bold">حقیقت، استاد ساز سعادت بشر. هیچ کس خود لذت را
                 رد نمی کند، دوست ندارد یا از آن اجتناب نمی کند، زیرا لذت است،
                 بلکه به این دلیل است</p>

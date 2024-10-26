@@ -55,10 +55,5 @@ exports.delete = async (req, res) => {
       },
     }
   );
-  // whishlist.items.filter((item) => {
-  //   item.equals(main._id);
-  //   // console.log(item);
-  // });
-  // await whishlist.save();
   res.json(true);
 };

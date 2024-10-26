@@ -16,6 +16,7 @@ const catrgoryRouter = require("./modules/category/category.router");
 const contactRouter = require("./modules/contact/contact.router");
 const commentRouter = require("./modules/comment/comment.router");
 const whishlistRouter = require("./modules/whishlist/whishlist.router");
+const saleRouter = require("./modules/sale/sale.router");
 //Packages
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -57,6 +58,12 @@ hbs.registerHelper("iflt", function (a, b, options) {
     return options.inverse(this);
   }
 });
+hbs.registerHelper("multiple", function (a, b, options) {
+  return a * b;
+});
+hbs.registerHelper("divide", function (a, b, options) {
+  return a / b;
+});
 //MiddleWares
 app.use("/auth", userRouter);
 app.use("/news", newsLetterRouter);
@@ -65,6 +72,7 @@ app.use("/category", catrgoryRouter);
 app.use("/contact-us", contactRouter);
 app.use("/comment", commentRouter);
 app.use("/whishlist", whishlistRouter);
+app.use("/sale", saleRouter);
 //Routes
 
 app.listen(process.env.PORT, () => {
